@@ -1,0 +1,142 @@
+/* Reset default margin and padding for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background color for the entire page */
+body {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main container for the application */
+.transcripto-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  width: 95%; /* Increased width */
+  max-width: 800px; /* Increased maximum width */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Header section containing the title and subtitle */
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007aff;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Styling for the action buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Common button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #007aff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005bb5;
+}
+
+/* Stop button style */
+.btn.stop {
+  background: #ff3b30;
+}
+
+.btn.stop:hover {
+  background: #d32f2f;
+}
+
+/* Reset button style */
+.btn.reset {
+  background: #444;
+}
+
+.btn.reset:hover {
+  background: #222;
+}
+
+/* Styling for the file upload section */
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  font-size: 1rem;
+  color: #007aff;
+  cursor: pointer;
+  border: 2px dashed #007aff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.file-label:hover {
+  background: #f0f8ff;
+}
+
+/* Styling for the transcript display area */
+.transcript-box {
+  flex: 1;
+  min-height: 200px;
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  white-space: pre-wrap;
+  color: #222;
+}
+
+/* Placeholder text when no transcript is available */
+.transcript-box .placeholder {
+  color: #888;
+  font-style: italic;
+}
