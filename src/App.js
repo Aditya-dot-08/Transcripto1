@@ -1,13 +1,15 @@
 import React from 'react';
-import Transcripto from './Transcripto';
 import './App.css';
+import Transcripto from './components/Transcripto';
+import bgImage from './TRANSCRIPTO.webp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Transcripto />
-      </header>
+    <div
+      className="App"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <Transcripto />
     </div>
   );
 }
